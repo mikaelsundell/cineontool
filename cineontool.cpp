@@ -2,7 +2,7 @@
 // Copyright (c) 2025 - present Mikael Sundell.
 
 #include <iostream>
-#include <rawtoaces/rawtoaces_util.h>
+#include <rawtoaces/image_converter.h>
 
 RAWTOACES_USING_NAMESPACE
 

@@ -17,30 +17,6 @@ target_link_libraries (${project_name}
 
 set_property (TARGET ${project_name} PROPERTY CXX_STANDARD 14)
 
-add_custom_command (
-    TARGET ${project_name}
-    POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-        ${CMAKE_SOURCE_DIR}/fonts
-        $<TARGET_FILE_DIR:${project_name}>/fonts
-)
-
-add_custom_command (
-    TARGET ${project_name}
-    POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-        ${CMAKE_SOURCE_DIR}/resources
-        $<TARGET_FILE_DIR:${project_name}>/resources
-)
-
 install (TARGETS ${project_name}
     RUNTIME DESTINATION bin
-)
-
-install (DIRECTORY ${CMAKE_SOURCE_DIR}/fonts
-    DESTINATION bin
-)
-
-install (DIRECTORY ${CMAKE_SOURCE_DIR}/resources
-    DESTINATION bin
 )
